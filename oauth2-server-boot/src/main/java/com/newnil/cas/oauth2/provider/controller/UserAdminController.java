@@ -96,7 +96,7 @@ public class UserAdminController {
         }
 
 
-        UserEntity userEntity = UserEntity.builder().username(username).password(passwordEncoder.encode(password)).build();
+        UserEntity userEntity =  UserEntity.builder().username(username).password(passwordEncoder.encode(password)).build();
 
         userEntity.setRoles(roles.stream().map(
                 role -> UserRoleXrefEntity.builder().user(userEntity).role(roleRepository.findOneByName(role)

@@ -12,13 +12,13 @@ public class MainController {
 
 	@Autowired
 	private OAuth2RestTemplate template;
-	
+
 	@RequestMapping("/")
 	public String homePage(Authentication auth) {
 		return "index";
 	}
 
-	@RequestMapping({ "/login", "/login.html" })
+    @RequestMapping({ "/login", "/login.html" })
 	public String dashboard() {
 		return "redirect:/";
 	}
